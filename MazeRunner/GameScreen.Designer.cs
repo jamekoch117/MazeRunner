@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Enabled = true;
+            this.gameTimer.Interval = 20;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // GameScreen
             // 
@@ -36,10 +44,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(1000, 500);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameScreen_Paint);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameScreen_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.GameScreen_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
