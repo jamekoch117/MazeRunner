@@ -28,6 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.playButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // playButton
+            // 
+            this.playButton.Location = new System.Drawing.Point(440, 165);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(130, 60);
+            this.playButton.TabIndex = 0;
+            this.playButton.Text = "Play";
+            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(440, 278);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(130, 59);
+            this.exitButton.TabIndex = 1;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             this.start = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -66,6 +89,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.start);
@@ -73,11 +98,12 @@
             this.Name = "MenuScreen";
             this.Size = new System.Drawing.Size(750, 406);
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
+        private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
