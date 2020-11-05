@@ -8,16 +8,17 @@ namespace MazeRunner
 {
     class Player
     {
-        public int x, y, speed, health;
-        string direction;
+        public int x, y, width, height, speed, health;
+        public string direction;
 
-        public Player(int _x, int _y, int _speed, int _health, string _direction)
+        public Player(int _x, int _y, int _width, int _height, int _speed, int _health)
         {
             x = _x;
             y = _y;
+            width = _width;
+            height = _height;
             speed = _speed;
             health = _health;
-            direction = _direction;
         }
 
         public void Move(string direction, int speed)
